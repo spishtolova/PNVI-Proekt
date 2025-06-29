@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import pygame
 import sys
 import random
@@ -494,7 +493,6 @@ def run_level(level):
         goal.draw(screen)
         player.draw(screen)
 
-        # Draw player stats
         pygame.draw.rect(screen, WHITE, (10, 10, 220, 90), border_radius=10)
         pygame.draw.rect(screen, BAMBOO_GREEN, (10, 10, 220, 90), width=2, border_radius=10)
 
@@ -753,7 +751,6 @@ def run_level():
             image = pygame.transform.scale(image, (int(width * scale), int(height * scale)))
             return image
 
-    # Player animation
     cat_frame_width = 256 // 8
     cat_frame_height = 18
     cat_scale = 2.5
@@ -761,7 +758,6 @@ def run_level():
     cat_sprite_sheet = SpriteSheet(cat_sheet_img)
     cat_frames = [cat_sprite_sheet.get_image(i, cat_frame_width, cat_frame_height, cat_scale) for i in range(8)]
 
-    # Enemy animation
     enemy_frame_width = 48
     enemy_frame_height = 48
     enemy_scale = 1.5
@@ -1208,6 +1204,5 @@ while running:
 
     pygame.display.flip()
     clock.tick(60)
-
->>>>>>> a00c608fc568d85e8ac35350b4058ed664127e41
+    
 pygame.quit()
